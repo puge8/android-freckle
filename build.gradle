@@ -33,6 +33,7 @@ ext {
     timberktVersion = "1.5.1"
     retrofitVersion = "2.5.0"
     gsonVersion = "2.8.5"
+    httpLogInterceptorVersion = "3.12.0"
 
     //Testing dependencies
     junitVersion = "4.12"
