@@ -31,6 +31,7 @@ dependencies {
     implementation "com.android.support:design:${rootProject.supportVersion}"
     implementation "org.jetbrains.anko:anko:${rootProject.ankoVersion}"
     implementation "com.github.ajalt:timberkt:${rootProject.timberktVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.httpLogInterceptorVersion}"
 
     //Retrofit dependencies
     implementation "com.squareup.retrofit2:retrofit:${rootProject.retrofitVersion}"
