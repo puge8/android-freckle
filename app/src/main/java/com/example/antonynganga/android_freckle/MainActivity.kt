@@ -47,4 +47,7 @@ class MainActivity : AppCompatActivity() {
     fun addLogText(log: String) {
         Toast.makeText(this, log, Toast.LENGTH_SHORT).show()
     }
+
 }
+
+
