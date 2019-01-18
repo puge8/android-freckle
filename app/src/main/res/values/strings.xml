@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android_Freckle</string>
+    <string name="error_internet_connection">Not COnnected to the Intenert</string>
+    <string name="snackbar_retry_text">Change your Wifi, then retry the connection</string>
 </resources>
