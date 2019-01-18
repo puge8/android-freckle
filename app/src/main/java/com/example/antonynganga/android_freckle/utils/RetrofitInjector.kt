@@ -1,5 +1,6 @@
 package com.example.antonynganga.android_freckle.utils;
 
+import com.example.antonynganga.android_freckle.data.Constants
 import com.example.antonynganga.android_freckle.services.AuthService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,6 +14,6 @@ class RetrofitInjector {
     }
 
     fun provideService(): AuthService? {
-        return provideRetrofit("https://secure.letsfreckle.com")!!.create(AuthService::class.java)
+        return provideRetrofit(Constants.AUTH_BASE_URL)!!.create(AuthService::class.java)
     }
 }
