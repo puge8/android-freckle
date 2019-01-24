@@ -34,6 +34,7 @@ ext {
     retrofitVersion = "2.5.0"
     gsonVersion = "2.8.5"
     httpLogInterceptorVersion = "3.12.0"
+    appCenterSdkVersion = "1.11.2"
 
 
     //Testing dependencies
