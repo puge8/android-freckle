@@ -41,10 +41,11 @@ dependencies {
     // Testing dependencies
     testImplementation "junit:junit:${rootProject.junitVersion}"
     androidTestImplementation "com.android.support.test:runner:${rootProject.testRunnerVersion}"
+    androidTestImplementation "com.android.support.test:rules:${rootProject.testRunnerVersion}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}"
+    // androidTestImplementation "com.android.support.test.espresso:testing-support-lib:${rootProject.espressoTestingSupportVersion}"
 
     //App Center
     implementation "com.microsoft.appcenter:appcenter-analytics:${rootProject.appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${rootProject.appCenterSdkVersion}"
-
 }
