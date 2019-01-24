@@ -1,13 +1,18 @@
 package com.example.antonynganga.android_freckle
 
+
 import android.content.IntentFilter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.antonynganga.android_freckle.data.Constants.CONNECTIVITY_ACTION
+import com.example.antonynganga.android_freckle.data.SecretConstants
 import com.example.antonynganga.android_freckle.services.NetworkChangeReceiver
 import com.example.antonynganga.android_freckle.util.NetworkInfo
 import com.github.ajalt.timberkt.Timber
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +32,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        AppCenter.start(application,
+            SecretConstants.APP_CENTER_SECRET,
+            Analytics::class.java, Crashes::class.java)
 
         Timber.plant(Timber.DebugTree())
 
