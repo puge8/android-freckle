@@ -1,8 +1,8 @@
-package com.example.antonynganga.android_freckle.utils;
+package com.example.antonynganga.androidfreckle.utils
 
-import com.example.antonynganga.android_freckle.BuildConfig
-import com.example.antonynganga.android_freckle.data.Constants
-import com.example.antonynganga.android_freckle.services.AuthService
+import com.example.antonynganga.androidfreckle.BuildConfig
+import com.example.antonynganga.androidfreckle.data.Constants
+import com.example.antonynganga.androidfreckle.services.AuthService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -17,7 +17,7 @@ class RetrofitInjector {
     }
     val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
-    fun provideRetrofit(baseUrl:String): Retrofit? {
+    fun provideRetrofit(baseUrl: String): Retrofit? {
         return Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(client)
