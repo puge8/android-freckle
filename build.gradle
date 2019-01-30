@@ -49,10 +49,8 @@ ext {
     testRunnerVersion = "1.0.2"
     espressoVersion = "3.0.2"
     espressoTestingSupportVersion = "3.0.2"
+
+
     ktLintVersion = "0.29.0"
-
-
-//    Firebase
     firebaseCore = "16.0.6"
-//    crashlytics = "2.9.8"
 }
