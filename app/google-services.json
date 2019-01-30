@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:969301447620:android:ff404da27a760278",
+        "mobilesdk_app_id": "1:969301447620:android:7c04adfc50e139cc",
         "android_client_info": {
-          "package_name": "com.example.antonynganga.androidfreckle"
+          "package_name": "com.example.antonynganga.android_freckle"
         }
       },
       "oauth_client": [
