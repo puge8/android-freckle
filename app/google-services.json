@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "969301447620",
+    "firebase_url": "https://android-freckle.firebaseio.com",
+    "project_id": "android-freckle",
+    "storage_bucket": "android-freckle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969301447620:android:7c04adfc50e139cc",
+        "android_client_info": {
+          "package_name": "com.example.antonynganga.android_freckle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969301447620-d8p0q29dm8nbqbsues3qemtushmn4ktk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLZz-NyV-9bLQY_4QkP1qL4PqNmG62FTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
