@@ -1,10 +1,9 @@
-package com.example.antonynganga.android_freckle.util
+package com.example.antonynganga.androidfreckle.util
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.telephony.TelephonyManager
-import com.example.antonynganga.android_freckle.data.Constants
-
+import com.example.antonynganga.androidfreckle.data.Constants
 
 object NetworkInfo {
 
@@ -32,7 +31,7 @@ object NetworkInfo {
 
         var status: String? = null
         if (conn == NetworkInfo.TYPE_WIFI) {
-            //status = "Wifi enabled";
+            // status = "Wifi enabled";
             status = Constants.CONNECT_TO_WIFI
         } else if (conn == NetworkInfo.TYPE_MOBILE) {
 //            status = "Mobile data enabled";
@@ -48,15 +47,15 @@ object NetworkInfo {
         val info = (context.getSystemService(Context.CONNECTIVITY_SERVICE)
                 as ConnectivityManager).activeNetworkInfo
         if (info == null || !info.isConnected)
-            return "-" //not connected
+            return "-" // not connected
         if (info.type == ConnectivityManager.TYPE_WIFI)
             return "WIFI"
         if (info.type == ConnectivityManager.TYPE_MOBILE) {
             val networkType = info.subtype
             when (networkType) {
-                TelephonyManager.NETWORK_TYPE_HSPAP  //api<13 : replace by 15
+                TelephonyManager.NETWORK_TYPE_HSPAP // api<13 : replace by 15
                 -> return "3G"
-                TelephonyManager.NETWORK_TYPE_LTE    //api<11 : replace by 13
+                TelephonyManager.NETWORK_TYPE_LTE // api<11 : replace by 13
                 -> return "4G"
                 else -> return "UNKNOWN"
             }

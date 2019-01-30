@@ -1,4 +1,4 @@
-package com.example.antonynganga.android_freckle.data
+package com.example.antonynganga.androidfreckle.data
 
 object Constants {
 

@@ -1,4 +1,4 @@
-package com.example.antonynganga.android_freckle
+package com.example.antonynganga.androidfreckle
 
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.assertion.ViewAssertions.matches

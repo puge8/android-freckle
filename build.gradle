@@ -42,4 +42,6 @@ ext {
     testRunnerVersion = "1.0.2"
     espressoVersion = "3.0.2"
     espressoTestingSupportVersion = "3.0.2"
+
+    ktLintVersion = "0.29.0"
 }
