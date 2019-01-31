@@ -22,6 +22,10 @@ android {
     }
 }
 
+configurations {
+    ktlint
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -32,6 +36,9 @@ dependencies {
     implementation "org.jetbrains.anko:anko:${rootProject.ankoVersion}"
     implementation "com.github.ajalt:timberkt:${rootProject.timberktVersion}"
     implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.httpLogInterceptorVersion}"
+
+    //ktlint
+    ktlint "com.github.shyiko:ktlint:${rootProject.ktLintVersion}"
 
     //Retrofit dependencies
     implementation "com.squareup.retrofit2:retrofit:${rootProject.retrofitVersion}"
@@ -48,4 +55,27 @@ dependencies {
     //App Center
     implementation "com.microsoft.appcenter:appcenter-analytics:${rootProject.appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${rootProject.appCenterSdkVersion}"
+}
+
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    main = "com.github.shyiko.ktlint.Main"
+    classpath = configurations.ktlint
+    args "src/**/*.kt"
+}
+
+check.dependsOn ktlint
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    main = "com.github.shyiko.ktlint.Main"
+    classpath = configurations.ktlint
+    args "-F", "src/**/*.kt"
 }

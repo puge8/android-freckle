@@ -1,14 +1,13 @@
-package com.example.antonynganga.android_freckle
-
+package com.example.antonynganga.androidfreckle
 
 import android.content.IntentFilter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.antonynganga.android_freckle.data.Constants.CONNECTIVITY_ACTION
-import com.example.antonynganga.android_freckle.data.SecretConstants
-import com.example.antonynganga.android_freckle.services.NetworkChangeReceiver
-import com.example.antonynganga.android_freckle.util.NetworkInfo
+import com.example.antonynganga.androidfreckle.util.NetworkInfo
+import com.example.antonynganga.androidfreckle.data.Constants.CONNECTIVITY_ACTION
+import com.example.antonynganga.androidfreckle.data.SecretConstants
+import com.example.antonynganga.androidfreckle.services.NetworkChangeReceiver
 import com.github.ajalt.timberkt.Timber
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -45,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             receiver = NetworkChangeReceiver()
         }
 
-
         if (NetworkInfo.getConnectivityStatus(this@MainActivity) > 0)
             Toast.makeText(this, "Connect", Toast.LENGTH_SHORT).show()
 
@@ -56,7 +54,4 @@ class MainActivity : AppCompatActivity() {
     fun addLogText(log: String) {
         Toast.makeText(this, log, Toast.LENGTH_SHORT).show()
     }
-
 }
-
-

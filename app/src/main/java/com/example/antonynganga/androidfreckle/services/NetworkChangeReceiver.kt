@@ -1,4 +1,4 @@
-package com.example.antonynganga.android_freckle.services
+package com.example.antonynganga.androidfreckle.services
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,10 +6,9 @@ import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 
-import com.example.antonynganga.android_freckle.MainActivity
-import com.example.antonynganga.android_freckle.data.Constants
-import com.example.antonynganga.android_freckle.util.NetworkInfo
-
+import com.example.antonynganga.androidfreckle.MainActivity
+import com.example.antonynganga.androidfreckle.data.Constants
+import com.example.antonynganga.androidfreckle.util.NetworkInfo
 
 class NetworkChangeReceiver : BroadcastReceiver() {
 
@@ -20,11 +19,10 @@ class NetworkChangeReceiver : BroadcastReceiver() {
         Log.e("Receiver ", "" + status)
 
         if (status == Constants.NOT_CONNECT) {
-            Toast.makeText(context,"not connection", Toast.LENGTH_SHORT).show()
-
+            Toast.makeText(context, "not connection", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(context,"connected to internet", Toast.LENGTH_SHORT).show()
-            Log.e("Receiver ", "connected to internet")//your code when internet connection come back
+            Toast.makeText(context, "connected to internet", Toast.LENGTH_SHORT).show()
+            Log.e("Receiver ", "connected to internet") // your code when internet connection come back
         }
         (context as MainActivity).addLogText(status)
     }
