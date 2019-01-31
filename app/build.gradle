@@ -4,14 +4,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'io.fabric'
-
-apply plugin: 'com.google.gms.google-services'
-
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.antonynganga.android_freckle"
+        applicationId "com.example.antonynganga.androidfreckle"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
@@ -87,3 +83,5 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
     classpath = configurations.ktlint
     args "-F", "src/**/*.kt"
 }
+
+apply plugin: 'com.google.gms.google-services'
