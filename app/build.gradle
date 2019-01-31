@@ -4,14 +4,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'io.fabric'
-
-apply plugin: 'com.google.gms.google-services'
-
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.antonynganga.android_freckle"
+        applicationId "com.example.antonynganga.androidfreckle"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
@@ -54,15 +50,14 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:${rootProject.testRunnerVersion}"
     androidTestImplementation "com.android.support.test:rules:${rootProject.testRunnerVersion}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}"
-    // androidTestImplementation "com.android.support.test.espresso:testing-support-lib:${rootProject.espressoTestingSupportVersion}"
 
     //App Center
     implementation "com.microsoft.appcenter:appcenter-analytics:${rootProject.appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${rootProject.appCenterSdkVersion}"
 
-    //    Firebase
-    implementation "com.google.firebase:firebase-core:${rootProject.firebaseCore}"
-    implementation "com.crashlytics.sdk.android:crashlytics:${rootProject.crashlytics}"
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+
 }
 
 android {
@@ -87,3 +82,5 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
     classpath = configurations.ktlint
     args "-F", "src/**/*.kt"
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -12,6 +12,12 @@ This project is built with Gradle, the [Android Gradle plugin](http://tools.andr
 * Clone [Android-Freckle](https://github.com/meshnesh/android-freckle) inside your working folder.
 * Start Android Studio
 * Select "Open Project" and select the generated root Project folder.
+* Setup the Keystore configuration by following the steps below;
+    1. Create an account in firebase if you do not own one
+    2. Create an application an application.
+    3. Follow the steps for setting up crashlytics on an android application.
+    4. Download the `google-services.json` file and paste it in `app/src` folder.
+    5. Run your application to make sure the application is connected to the `firebase crashlytics`
 
 ## Running the application on an emulator or actual device
 
@@ -32,7 +38,7 @@ There can be many ways of running your application in Android Studio.
         2. click the run button in android studio.
         3. Proceed to `create new virtual device`.
         4. Select the category below:
-            - `Tablet`
+            - `Phone`
         5. Proceed to the type of tablet to use and click next.
         6. Select the latest version and the preferred API version `27 or later`.
         7. Click finish.
@@ -45,3 +51,8 @@ There can be many ways of running your application in Android Studio.
      * While updating the google play services one can follow this link
      https://developers.google.com/android/guides/setup
      http://www.androiddocs.com/google/play-services/setup.html#
+     
+![alt text](app/doc/images/BuildVariantChooser.png)
+## Java 8 SE
+Java 8 SE(Java 1.8) is the current stable version used in the app. Download and install from [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Run ``` java --version ``` in your terminal to see which version of java you are using. In case you have multiple java versions installed, run ``` /usr/libexec/java_home -V ``` to see installed versions.(Check [this](https://stackoverflow.com/questions/46513639/how-to-downgrade-java-from-9-to-8-on-a-macos-eclipse-is-not-running-with-java-9) thread in case you run into trouble while switching versions.)
