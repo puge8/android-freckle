@@ -1,10 +1,11 @@
-package com.example.antonynganga.androidfreckle
+package com.example.antonynganga.androidfreckle.view.DashBoard
 
 import android.content.IntentFilter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.antonynganga.androidfreckle.R
 import com.example.antonynganga.androidfreckle.util.NetworkInfo
 import com.example.antonynganga.androidfreckle.data.Constants.CONNECTIVITY_ACTION
 import com.example.antonynganga.androidfreckle.data.SecretConstants
