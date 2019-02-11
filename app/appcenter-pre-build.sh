@@ -1,20 +1,8 @@
 #!/usr/bin/env bash
 
-echo "================================================================================================================="
-GOOGLE_JSON_FILE=$APPCENTER_SOURCE_DIRECTORY/app/google-services.json
-
-echo "================================================================================================================="
-
-echo $APPCENTER_SOURCE_DIRECTORY
-
-if [ -e "$GOOGLE_JSON_FILE" ]
+echo "Trying build script"
+# Example: Change bundle name of an iOS app for non-production
+if [ "$APPCENTER_BRANCH" != "ch-fix-failing-build" ];
 then
-    echo "================================================================================================================="
-    echo "Updating Google Json"
-    echo "$GOOGLE_JSON" > $GOOGLE_JSON_FILE
-    sed -i -e 's/\\"/'\"'/g' $GOOGLE_JSON_FILE
-
-    echo "File content:"
-    cat $GOOGLE_JSON_FILE
+    plutil -replace CFBundleName -string "\$(PRODUCT_NAME) Beta" $APPCENTER_SOURCE_DIRECTORY/MyApp/Info.plist
 fi
-echo "================================================================================================================="
