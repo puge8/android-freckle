@@ -29,6 +29,7 @@ configurations {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:${rootProject.supportVersion}"
     implementation "com.android.support.constraint:constraint-layout:${rootProject.constraintLayoutVersion}"
@@ -55,9 +56,9 @@ dependencies {
     implementation "com.microsoft.appcenter:appcenter-analytics:${rootProject.appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${rootProject.appCenterSdkVersion}"
 
-    //Firebase
-    implementation 'com.google.firebase:firebase-core:16.0.1'
-
+    //    Firebase
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.8'
 }
 
 android {

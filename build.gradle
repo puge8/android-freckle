@@ -37,12 +37,12 @@ ext {
     httpLogInterceptorVersion = "3.12.0"
     appCenterSdkVersion = "1.11.2"
 
-
     //Testing dependencies
     junitVersion = "4.12"
     testRunnerVersion = "1.0.2"
     espressoVersion = "3.0.2"
     espressoTestingSupportVersion = "3.0.2"
 
+    firebaseCore = "16.0.6"
     ktLintVersion = "0.29.0"
 }

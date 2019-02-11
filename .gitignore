@@ -1,5 +1,4 @@
 *.iml
-.gradle
 /local.properties
 /.idea/caches/build_file_checksums.ser
 /.idea/libraries
@@ -12,3 +11,30 @@
 
 .idea/instapk.xml
 instapk.log*
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+gradlew.bat
+gradlew
+build/
+gradle.properties
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Intellij project files
+*.iws
+.idea/tasks.xml
+.idea
+
+*.iml
+
+# OS
+.DS_Store
+
+#Config files
+google-services.json
